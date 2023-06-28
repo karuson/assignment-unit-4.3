@@ -3,19 +3,26 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 let basket = [];
 
+// function to add 'item' to basket array
+// after `item` is added, return `true` value
 function addItem(item) {
     console.log('in addItem function');
     basket.push(item);
-    console.log(basket);
+    console.log(`Basket is ${basket}`);
     return true;
-}
+} // end addItem
+
+// testing addItem
+console.log(`Basket is ${basket}`);
+console.log('Adding Ice Cream (expect true)' addItem('Ice Cream'));
+console.log(`Basket is now ${basket}`);
 
 function listItems() {
     console.log('in listItems function');
     for (item of basket) {
         console.log(item);
-    }
-}
+    } // end for
+} // end listItems
 
 function empty() {
     console.log('in empty function');
