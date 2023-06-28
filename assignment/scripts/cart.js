@@ -8,7 +8,7 @@ let basket = [];
 function addItem(item) {
     console.log('in addItem function');
     basket.push(item);
-    console.log(`Basket is ${basket}`);
+    console.log(`Basket is, ${basket}`);
     return true;
 } // end addItem
 
@@ -46,16 +46,26 @@ function isFull() {
 } // end isFull
 
 function addItem() {
-    if (isFull) {
-        console.log('Unable to add');
-        return false;
-    } else {
+    if (isFull === false) {
         basket.push(item);
-        console.log(`Basket is ${basket}`);
+        console.log(`Basket is, ${basket}`)
         return true;
+    } else {
+        console.log('Basket is full!');
+        return false;
     } // end if else
 } // end addItem
 
+basket = ['chicken', 'eggs', 'milk', 'butter', 'bread'];
+console.log(`This should return false when we try and add another item ${addItem('cheese')}`);
+basket = ['chicken', 'eggs', 'milk', 'butter',];
+console.log(`This should add cheese to the basket array and return true ${addItem('cheese')}`);
+console.log(basket);
+
+
+function removeItem() {
+
+} // end removeItem
 
 
 
