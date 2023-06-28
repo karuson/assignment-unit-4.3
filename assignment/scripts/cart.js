@@ -31,16 +31,30 @@ function empty() {
     console.log('in empty function');
     basket = [];
     console.log('Basket array should now be empty', basket);
-}
+} // end empty
 
+// STRETCH
 const maxItems = 5;
 
 function isFull() {
+    console.log('in isFull function')
     if (basket.length < maxItems) {
-        
-    }
-}
+        return false;
+    } else {
+        return true;
+    } // end if else
+} // end isFull
 
+function addItem() {
+    if (isFull) {
+        console.log('Unable to add');
+        return false;
+    } else {
+        basket.push(item);
+        console.log(`Basket is ${basket}`);
+        return true;
+    } // end if else
+} // end addItem
 
 
 
