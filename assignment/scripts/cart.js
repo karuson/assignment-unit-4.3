@@ -4,21 +4,21 @@ console.log('***** Cart Functions *****');
 let basket = [];
 
 function addItem(item) {
-    console.log('in addItem');
+    console.log('in addItem function');
     basket.push(item);
     console.log(basket);
     return true;
 }
 
 function listItems() {
-    console.log('in listItems');
+    console.log('in listItems function');
     for (item of basket) {
-        console.log('Items in basket', item);
+        console.log(item);
     }
 }
 
 function empty() {
-    console.log('in empty');
+    console.log('in empty function');
     basket = [];
     console.log(basket);
 }
