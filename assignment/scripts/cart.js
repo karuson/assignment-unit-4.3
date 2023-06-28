@@ -14,8 +14,8 @@ function addItem(item) {
 
 // testing addItem
 console.log(`Basket is ${basket}`);
-console.log('Adding Ice Cream (expect true)' addItem('Ice Cream'));
-console.log(`Basket is now ${basket}`);
+console.log('Adding Ice Cream (expect true)', addItem('Ice Cream'));
+console.log(`Basket is now ${basket}`); 
 
 function listItems() {
     console.log('in listItems function');
@@ -24,13 +24,22 @@ function listItems() {
     } // end for
 } // end listItems
 
+// double checking listItems- is this necessary?
+console.log(basket);
+
 function empty() {
     console.log('in empty function');
     basket = [];
-    console.log(basket);
+    console.log('Basket array should now be empty', basket);
 }
 
+const maxItems = 5;
 
+function isFull() {
+    if (basket.length < maxItems) {
+        
+    }
+}
 
 
 
