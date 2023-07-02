@@ -15,7 +15,7 @@ function addItem(item) {
 // testing addItem
 console.log(`Basket is ${basket}`);
 console.log('Adding Ice Cream (expect true)', addItem('Ice Cream'));
-console.log(`Basket is now ${basket}`); 
+console.log(`Basket is now ${basket}`);
 
 function listItems() {
     console.log('in listItems function');
@@ -37,7 +37,6 @@ function empty() {
 const maxItems = 5;
 
 function isFull() {
-    console.log('in isFull function')
     if (basket.length < maxItems) {
         return false;
     } else {
@@ -45,13 +44,19 @@ function isFull() {
     } // end if else
 } // end isFull
 
-function addItem() {
+function addItem(item) {
+    console.log('in addItem function');
+    console.log('item is:', item);
+    
+    // if else conditional to check whether basket is full
+        // if isFull false: add item to basket, return true
+        // if isFull true: return false, not adding item
     if (isFull === false) {
+        console.log('basket is not full');
         basket.push(item);
-        console.log(`Basket is, ${basket}`)
         return true;
     } else {
-        console.log('Basket is full!');
+        console.log('basket full, returning false');
         return false;
     } // end if else
 } // end addItem
@@ -61,14 +66,6 @@ console.log(`This should return false when we try and add another item ${addItem
 basket = ['chicken', 'eggs', 'milk', 'butter',];
 console.log(`This should add cheese to the basket array and return true ${addItem('cheese')}`);
 console.log(basket);
-
-
-function removeItem() {
-
-} // end removeItem
-
-
-
 
 
 // DO NOT MODIFY
@@ -83,6 +80,6 @@ try {
         isFull: typeof isFull !== 'undefined' ? isFull : undefined,
         removeItem: typeof removeItem !== 'undefined' ? removeItem : undefined,
     };
-} catch(e) {
+} catch (e) {
     // Do nothing
 }
